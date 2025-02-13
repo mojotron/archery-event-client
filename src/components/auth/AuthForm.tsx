@@ -8,6 +8,7 @@ type Props = {
 const FormContainer = ({ handler, children }: Props) => {
   return (
     <form
+      className="w-full sm:w-96 flex flex-col items-center gap-2"
       onSubmit={(e) => {
         e.preventDefault();
         handler();

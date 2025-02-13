@@ -10,8 +10,10 @@ type Props = {
 
 const FormInput = ({ label, type, name, value, onChange }: Props) => {
   return (
-    <div>
-      <label htmlFor={name}>{label}</label>
+    <div className="w-full">
+      <label htmlFor={name} className="text-md font-inter text-main-100">
+        {label}
+      </label>
       <input
         type={type}
         name={name}
@@ -19,6 +21,7 @@ const FormInput = ({ label, type, name, value, onChange }: Props) => {
         value={value}
         onChange={onChange}
         required
+        className="shadow-xs bg-main-500 border border-main-900 text-gray-100 text-sm rounded-lg focus:ring focus:ring-blue-500 focus:border-blue-500 w-full px-4 py-2.5 outline-none"
       />
     </div>
   );
