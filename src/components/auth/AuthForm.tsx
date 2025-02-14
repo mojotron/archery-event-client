@@ -5,7 +5,7 @@ type Props = {
   handler: () => void;
 };
 
-const FormContainer = ({ handler, children }: Props) => {
+const FormForm = ({ handler, children }: Props) => {
   return (
     <form
       className="w-full sm:w-96 flex flex-col items-center gap-2"
@@ -19,4 +19,4 @@ const FormContainer = ({ handler, children }: Props) => {
   );
 };
 
-export default FormContainer;
+export default FormForm;

@@ -21,7 +21,7 @@ const FormInput = ({ label, type, name, value, onChange }: Props) => {
         value={value}
         onChange={onChange}
         required
-        className="shadow-xs bg-main-500 border border-main-900 text-gray-100 text-sm rounded-lg focus:ring focus:ring-blue-500 focus:border-blue-500 w-full px-4 py-2.5 outline-none"
+        className="shadow-xs bg-main-500 border border-main-900 text-gray-100 text-sm rounded-lg focus:ring focus:ring-sec-blue-500 focus:border-sec-blue-500 w-full px-4 py-2.5 outline-none"
       />
     </div>
   );
