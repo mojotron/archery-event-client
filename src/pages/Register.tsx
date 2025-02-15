@@ -6,7 +6,7 @@ import { postRegisterUser } from "../lib/api";
 // components
 import FormInput from "../components/auth/AuthInput";
 import AuthForm from "../components/auth/AuthForm";
-import SubmitButton from "../components/ui/Button";
+import Button from "../components/ui/Button";
 import PageHeading from "../components/ui/PageHeading";
 import LinkCard from "../components/auth/LinkCard";
 import InputErrors, { InputError } from "../components/auth/InputErrors";
@@ -97,7 +97,7 @@ const Register = () => {
           onChange={handleChange}
         />
 
-        <SubmitButton
+        <Button
           label="Create Account"
           type="submit"
           isLoading={isPending}
