@@ -10,3 +10,6 @@ type RegisterParams = {
 
 export const postRegisterUser = async (data: RegisterParams) =>
   API.post("/auth/register", data);
+
+export const getVerifyEmail = async (verificationCode: string) =>
+  API.get(`/auth/email/verify/${verificationCode}`);
