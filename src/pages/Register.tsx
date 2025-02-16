@@ -53,9 +53,7 @@ const Register = () => {
       <PageHeading>create new account</PageHeading>
 
       <AuthForm handler={mutate}>
-        {isError && error.message === "Form input error" && (
-          <InputErrors error={error as unknown as InputError} />
-        )}
+        {isError && <InputErrors error={error as unknown as InputError} />}
 
         <FormInput
           type="text"
