@@ -8,7 +8,7 @@ type Props = {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
-const FormInput = ({ label, type, name, value, onChange }: Props) => {
+const AuthInput = ({ label, type, name, value, onChange }: Props) => {
   return (
     <div className="w-full">
       <label htmlFor={name} className="text-md font-inter text-main-100">
@@ -27,4 +27,4 @@ const FormInput = ({ label, type, name, value, onChange }: Props) => {
   );
 };
 
-export default FormInput;
+export default AuthInput;

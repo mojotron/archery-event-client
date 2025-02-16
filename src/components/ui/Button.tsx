@@ -8,7 +8,7 @@ type Props = {
   clickHandler?: () => void;
 };
 
-const SubmitButton = ({
+const Button = ({
   label,
   type = "button",
   isDisabled = false,
@@ -27,4 +27,4 @@ const SubmitButton = ({
   );
 };
 
-export default SubmitButton;
+export default Button;

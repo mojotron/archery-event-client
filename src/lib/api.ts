@@ -20,3 +20,6 @@ type LoginParams = {
 };
 export const postLoginUser = async (data: LoginParams) =>
   API.post("/auth/login", data);
+// forgot password
+export const postForgotPassword = async (email: string) =>
+  API.post("/auth/password/forgot", { email });
