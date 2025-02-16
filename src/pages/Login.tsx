@@ -65,6 +65,11 @@ const Login = () => {
         linkPath="/register"
         linkText="Register."
       />
+      <LinkCard
+        message="Forgot password?"
+        linkPath="/password/forgot"
+        linkText="Reset."
+      />
     </div>
   );
 };

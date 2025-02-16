@@ -4,6 +4,7 @@ import Register from "./pages/Register";
 import VerifyEmail from "./pages/VerifyEmail";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/email/verify/:code" element={<VerifyEmail />} />
         <Route path="/login" element={<Login />} />
         <Route path="/password/forgot/" element={<ForgotPassword />} />
+        <Route path="/password/reset/" element={<ResetPassword />} />
       </Routes>
     </div>
   );

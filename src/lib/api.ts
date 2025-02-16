@@ -23,3 +23,10 @@ export const postLoginUser = async (data: LoginParams) =>
 // forgot password
 export const postForgotPassword = async (email: string) =>
   API.post("/auth/password/forgot", { email });
+// reset password
+type ResetPasswordParams = {
+  verificationCode: string;
+  password: string;
+};
+export const postResetPassword = async (data: ResetPasswordParams) =>
+  API.post("/auth/password/reset", data);
