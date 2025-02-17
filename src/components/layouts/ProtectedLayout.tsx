@@ -1,19 +1,19 @@
 import { Navigate, Outlet } from "react-router";
 import useAuth from "../../hooks/useAuth";
 import LoadingSpinner from "../ui/LoadingSpinner";
+import UserMenu from "../dashboard/UserMenu";
 
 const ProtectedLayout = () => {
-  const { data, isLoading } = useAuth();
-
-  console.log(data);
+  const { user, isLoading } = useAuth();
 
   return (
     <div>
       {isLoading ? (
         <LoadingSpinner />
-      ) : data ? (
+      ) : user ? (
         <>
           <Outlet />
+          <UserMenu />
         </>
       ) : (
         <Navigate

@@ -1,9 +1,9 @@
 import useAuth from "../hooks/useAuth";
 
 const Profile = () => {
-  const { data } = useAuth();
+  const { user } = useAuth();
 
-  return <div className="text-main-100">{JSON.stringify(data)}</div>;
+  return <div className="text-main-100">{JSON.stringify(user)}</div>;
 };
 
 export default Profile;

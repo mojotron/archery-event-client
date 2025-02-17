@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 // api
 import { getUser } from "../lib/api";
+
 // import { UserType } from "../types/userType";
 
 const AUTH_QUERY_KEY = "auth";
@@ -12,7 +13,7 @@ const useAuth = () => {
     staleTime: Infinity,
   });
 
-  return { data, ...rest };
+  return { user: data?.user, ...rest };
 };
 
 export default useAuth;
