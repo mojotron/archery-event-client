@@ -26,8 +26,6 @@ const Login = () => {
     setFormData((oldState) => ({ ...oldState, [name]: value }));
   };
 
-  console.log(error);
-
   const buttonDisabled = !formData.email || formData.password.length < 8;
 
   return (

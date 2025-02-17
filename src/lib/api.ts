@@ -1,5 +1,7 @@
 import API from "../config/apiClient";
 
+import { ResponseUserType } from "../types/userType";
+//AUTH
 // register user
 type RegisterParams = {
   firstName: string;
@@ -30,3 +32,7 @@ type ResetPasswordParams = {
 };
 export const postResetPassword = async (data: ResetPasswordParams) =>
   API.post("/auth/password/reset", data);
+
+// USER
+// get user data
+export const getUser = async (): Promise<ResponseUserType> => API.get("/user");

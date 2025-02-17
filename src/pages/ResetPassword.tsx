@@ -5,14 +5,10 @@ import ResetPasswordForm from "../components/auth/ResetPasswordForm";
 const ResetPassword = () => {
   const [searchParams] = useSearchParams();
   const code = searchParams.get("code");
-  const expire = Number(searchParams.get("exp"));
+  const expire = Number(searchParams.get("expire"));
   const now = Date.now();
 
   const isLinkValid = code && expire && expire > now;
-
-  if (isLinkValid) {
-    return <div>Reset Password form</div>;
-  }
 
   return (
     <div className="p-4 flex flex-col items-center">
