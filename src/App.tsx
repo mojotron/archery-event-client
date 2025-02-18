@@ -9,6 +9,7 @@ import ProtectedLayout from "./components/layouts/ProtectedLayout";
 import Profile from "./pages/Profile";
 // set navigate in memory
 import { setNavigate } from "./lib/navigation";
+import Settings from "./pages/Settings";
 
 const App = () => {
   // set navigation in memory to use it in axios interceptor
@@ -21,6 +22,7 @@ const App = () => {
         {/* protected routes */}
         <Route path="/dashboard" element={<ProtectedLayout />}>
           <Route index element={<Profile />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
         {/* auth routes */}
         <Route path="/register" element={<Register />} />

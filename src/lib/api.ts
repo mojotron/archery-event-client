@@ -1,4 +1,5 @@
 import API from "../config/apiClient";
+import { ResponseSessionsType } from "../types/sessionType";
 
 import { ResponseUserType } from "../types/userType";
 //AUTH
@@ -32,7 +33,14 @@ type ResetPasswordParams = {
 };
 export const postResetPassword = async (data: ResetPasswordParams) =>
   API.post("/auth/password/reset", data);
+// logout
+export const getLogout = async () => API.get("/auth/logout");
 
 // USER
 // get user data
 export const getUser = async (): Promise<ResponseUserType> => API.get("/user");
+
+//SESSIONS
+// get all sessions
+export const getSessions = async (): Promise<ResponseSessionsType> =>
+  API.get("/sessions");
