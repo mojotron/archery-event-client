@@ -38,14 +38,3 @@ API.interceptors.response.use(
 );
 
 export default API;
-
-// if (status === 401 && data.errorCode === "InvalidAccessToken") {
-//   try {
-//     await API.get("/auth/refresh")
-//     return API(config)
-//   } catch (err) {
-//     queryClient.clear();
-//     navigate("/login", {
-//       state: { redirectUrl: window.location.pathname },
-//     });
-//   }
