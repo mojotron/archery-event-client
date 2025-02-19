@@ -44,3 +44,6 @@ export const getUser = async (): Promise<ResponseUserType> => API.get("/user");
 // get all sessions
 export const getSessions = async (): Promise<ResponseSessionsType> =>
   API.get("/sessions");
+// delete session
+export const deleteSession = async (sessionId: string) =>
+  API.delete(`/sessions/${sessionId}`);
